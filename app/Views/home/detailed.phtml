@@ -1,0 +1,24 @@
+
+
+<div class="container">
+
+    <p class="mt-2">
+        <a href="/posts" class="btn btn-primary ">Ler mais posts</a>
+        <a href="/post/edit/<?= $this->data->post->id ?>" class="btn btn-warning float-end">
+            Atualizar Post
+        </a>
+    </p>
+
+    <h3 class="text-center mt-3"><?= $this->data->post->title; ?></h3>
+    <p class="mt-4">
+        <?= $this->data->post->content; ?>
+    </p>
+
+    <p class="mt-2">
+        <a href="/post/delete/<?= $this->data->post->id ?>"
+           onclick="return confirm('Deseja Deletar Este Post?');"
+           class="btn btn-danger float-end">
+            Deletar Post
+        </a>
+    </p>
+</div>
